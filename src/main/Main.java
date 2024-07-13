@@ -14,7 +14,9 @@ public class Main extends PApplet {
     }
 
     public void updateObjects(){
-
+        for(GameObject object : objects){
+            object.update();
+        }
     }
 
     public static void main(String[] passedArgs) {
