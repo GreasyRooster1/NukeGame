@@ -2,15 +2,19 @@ package main;
 
 import processing.core.PApplet;
 
-public class Main extends PApplet {
-    GameObject[] objects = {};
+import static main.ObjectManager.*;
 
+public class Main extends PApplet {
+    public static Main app;
     public void settings() {
         size(500, 500);
+        app = this;
+        ObjectManager.addObject(new GameObject(250,250));
     }
 
     public void draw(){
         background(0);
+        updateObjects();
     }
 
     public void updateObjects(){
